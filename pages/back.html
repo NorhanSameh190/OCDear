@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        OCD
+    </title>
+    <!-- Bootstrap file -->
+    <link rel="stylesheet" href="../style pages/boot/bootstrap.min.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="../style pages/Css/StyleBack.css">
+    <!-- font AWesome -->
+    <link rel="stylesheet" href="../style pages/Css/all.min.css">
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="videoTimer">
+        <div class="container">
+            <h1> ما وراء الظلال: التغلب على العقبات الداخلية</h1>
+            <p>مرحبًا بكم في مجموعة مقاطع الفيديو الخاصة بنا، حيث يلتقي التعلم بالمرح والخيال لا حدود له! تم تصميم مجموعتنا المختارة بعناية من مقاطع الفيديو لإشراك العقول الشابة وتوفير تجربة تفاعلية وتعليمية. بدءًا من رواية القصص المتحركة التي تبعث الحياة في الشخصيات المحبوبة، إلى الصور المرئية النابضة بالحياة والملونة التي تشعل الإبداع، هناك شيء يستمتع به كل طفل. مرحبًا بكم في مجموعة مقاطع الفيديو الخاصة بنا، حيث يلتقي التعلم بالمرح والخيال لا حدود له! تم تصميم مجموعتنا المختارة بعناية من مقاطع الفيديو لإشراك العقول الشابة وتوفير تجربة تفاعلية وتعليمية. بدءًا من رواية القصص المتحركة التي تبعث الحياة في الشخصيات المحبوبة، إلى الصور المرئية النابضة بالحياة والملونة التي تشعل الإبداع، هناك شيء يستمتع به كل طفل.مرحبًا بكم في مجموعة مقاطع الفيديو الخاصة بنا، حيث يلتقي التعلم بالمرح والخيال لا حدود له! تم تصميم مجموعتنا المختارة بعناية من مقاطع الفيديو لإشراك العقول الشابة وتوفير تجربة تفاعلية وتعليمية. بدءًا من رواية القصص المتحركة التي تبعث الحياة في الشخصيات المحبوبة، إلى الصور المرئية النابضة بالحياة والملونة التي تشعل الإبداع، هناك شيء يستمتع به كل طفل.مرحبًا بكم في مجموعة مقاطع الفيديو الخاصة بنا، حيث يلتقي التعلم بالمرح والخيال لا حدود له! تم تصميم مجموعتنا المختارة بعناية من مقاطع الفيديو لإشراك العقول الشابة وتوفير تجربة تفاعلية وتعليمية. بدءًا من رواية القصص المتحركة التي تبعث الحياة في الشخصيات المحبوبة، إلى الصور المرئية النابضة بالحياة والملونة التي تشعل الإبداع، هناك شيء يستمتع به كل طفل.</p>
+            <div class="MainVideo">
+                <video controls>
+                    <source src="../style pages/image/video1.mp4" type="video/mp4">
+                    متصفحك الحالي لا يدعم تشغيل الفيديو
+                </video>
+            </div>
+            <div class="displayTime">
+                <span>أدخل الوقت الذي شاهدت فيه الفيديو</span>
+                <div class="d-inline-block">
+                    <span id="demo"></span>
+                </div>
+            </div>
+            <div class="slideContainer">
+                <input type="range" min="1" max="100" value="1" id="myRange" class="sliderRange">
+            </div>
+            <div class="BtnSendTime">
+                <button id="SendTime">إرسال</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+        output.innerHTML = this.value;
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+    slider.addEventListener("input", function() {
+        if (slider.value > 1) {
+            slider.style.background = "#00994F"; 
+            slider.style.background = "-webkit-linear-gradient(right, #00994F 0%, #00994F " + slider.value + "%, #d3d3d3 " + slider.value + "%, #d3d3d3 100%)"; 
+            slider.style.background = "linear-gradient(to left, #00994F 0%, #00994F " + slider.value + "%, #d3d3d3 " + slider.value + "%, #d3d3d3 100%)";
+        } else {
+            slider.style.background = "#d3d3d3";
+        }
+    });
+});
+
+</script>
+</body>
+</html>
